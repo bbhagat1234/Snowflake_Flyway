@@ -1,7 +1,7 @@
 variables:
 - group: Snowflake.Database
 - name: DBNAME
-  value: flyway_demo
+  value: VARSITY_REPORTING
 - name: flywayartifactName
   value: DatabaseArtifacts  
 - name: flywayVmImage
