@@ -41,20 +41,20 @@ stages:
       containerImage: $(flywayContainerImage)
       environmentName: DEV
 
-# - stage: QA
-#   variables:
-#   - name: DBNAME_POSTFIX
-#     value: _QA
-#   jobs:
-#   - template: templates/snowflakeFlywayDeploy.yml
-#     parameters:
-#       jobName: QA
-#       databaseName: $(DBNAME)
-#       databasePostfix: $(DBNAME_POSTFIX)
-#       artifactName: $(flywayartifactName)
-#       vmImage: $(flywayVmImage)
-#       containerImage: $(flywayContainerImage)
-#       environmentName: QA
+- stage: QA
+  variables:
+  - name: DBNAME_POSTFIX
+    value: _QA
+  jobs:
+  - template: templates/snowflakeFlywayDeploy.yml
+    parameters:
+      jobName: QA
+      databaseName: $(DBNAME)
+      databasePostfix: $(DBNAME_POSTFIX)
+      artifactName: $(flywayartifactName)
+      vmImage: $(flywayVmImage)
+      containerImage: $(flywayContainerImage)
+      environmentName: QA
 
 # - stage: PROD
 #   variables:
