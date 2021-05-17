@@ -1,7 +1,3 @@
-create or replace database VARSITY_STAGE;
-
-create or replace schema VARSITY_STAGE.PUBLIC;
-
 create or replace TABLE VARSITY_STAGE.PUBLIC.AS400_DJLIBR_CUSTMRT (
 	"Active" VARCHAR(16777216),
 	"Company_Number" NUMBER(38,0),
